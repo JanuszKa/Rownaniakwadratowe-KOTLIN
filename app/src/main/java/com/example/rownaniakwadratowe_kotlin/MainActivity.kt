@@ -1,7 +1,9 @@
 package com.example.rownaniakwadratowe_kotlin
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.jjoe64.graphview.GraphView
@@ -32,26 +34,39 @@ class MainActivity : AppCompatActivity() {
         graph.viewport.setMaxX(400.0);
         val rozwiazania = findViewById<View>(R.id.rozwiazanie)
         rozwiazania.visibility = View.VISIBLE
+        rozwiaz()
     }
 
     private fun DataPoint(a: Int, b: Double): DataPoint {
         return DataPoint(a.toDouble(), b.toDouble())
     }
 
+    @SuppressLint("SetTextI18n")
     private fun rozwiaz() {
 
-        val delta:Float
-        val a=findViewById<TextView>(R.id.input_a).toString().toFloat()
-        val b=findViewById<TextView>(R.id.input_b).toString().toFloat()
-        val c=findViewById<TextView>(R.id.input_c).toString().toFloat()
-        delta=b*b-4*a*c
+        val a:Float = findViewById<EditText>(R.id.input_a).text.toString().toFloat()
+        val b:Float = findViewById<TextView>(R.id.input_b).text.toString().toFloat()
+        val c:Float = findViewById<TextView>(R.id.input_c).text.toString().toFloat()
+        var delta:Float=b*b-4*a*c
         if(delta>0) {
-            var x1 = (-b - sqrt(delta)) / (2 * a)
-            var x2 = (-b + sqrt(delta)) / (2 * a)
+            val x1 = (-b - sqrt(delta)) / (2 * a)
+            val x2 = (-b + sqrt(delta)) / (2 * a)
+            findViewById<TextView>(R.id.rx1).text= "X1=$x1"
+            findViewById<TextView>(R.id.rx2).text= "X2=$x2"
+            val rx1 = findViewById<View>(R.id.rx1)
+            rx1.visibility = View.VISIBLE
+            val rx2 = findViewById<View>(R.id.rx2)
+            rx2.visibility = View.VISIBLE
         }
         if(delta==0f){
-            var x1 = -b/(2*a)
-            var x2 = -b/(2*a)
+            val x1 = -b/(2*a)
+            val x2 = -b/(2*a)
+            findViewById<TextView>(R.id.rx1).text= "X1=$x1"
+            findViewById<TextView>(R.id.rx2).text= "X2=$x2"
+            val rx1 = findViewById<View>(R.id.rx1)
+            rx1.visibility = View.VISIBLE
+            val rx2 = findViewById<View>(R.id.rx2)
+            rx2.visibility = View.VISIBLE
         }
 
         if(delta<0){

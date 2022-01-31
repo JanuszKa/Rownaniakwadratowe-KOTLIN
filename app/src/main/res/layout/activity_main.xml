@@ -37,7 +37,9 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/a"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:numeric="signed|decimal"
+        android:text="0"
         android:textAlignment="center"
         android:textColorHint="#78909C"
         android:textSize="20sp"
@@ -66,7 +68,7 @@
         android:id="@+id/c"
         android:layout_width="72dp"
         android:layout_height="26dp"
-        android:text="@string/c"
+        android:text="@string/cc"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.766"
@@ -88,6 +90,36 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.564" />
+
+
+    <TextView
+        android:id="@+id/rx1"
+        android:layout_width="171dp"
+        android:layout_height="24dp"
+        android:text="@string/rx1"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.669" />
+
+
+    <TextView
+        android:id="@+id/rx2"
+        android:layout_width="171dp"
+        android:layout_height="24dp"
+        android:text="@string/rx2"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742" />
 
     <TextView
         android:id="@+id/x2"
@@ -123,8 +155,9 @@
         android:autoText="false"
         android:autofillHints=""
         android:ems="10"
-        android:hint="C"
-        android:inputType="numberDecimal"
+        android:hint="@string/c"
+        android:inputType="numberSigned|numberDecimal"
+        android:text="0"
         android:textAlignment="center"
         android:textColorHint="#78909C"
         android:textSize="20sp"
@@ -135,7 +168,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.465"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <EditText
         android:id="@+id/input_b"
@@ -144,7 +177,8 @@
         android:ems="10"
         android:hint="@string/b"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:text="0"
         android:textAlignment="center"
         android:textColorHint="#78909C"
         android:textSize="20sp"

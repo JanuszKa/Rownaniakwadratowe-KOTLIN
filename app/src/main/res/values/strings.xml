@@ -4,8 +4,12 @@
     <string name="x_2">X+</string>
     <string name="x2">2</string>
     <string name="x">X+</string>
-    <string name="c">=0</string>
+    <string name="c">C</string>
     <string name="a">A</string>
     <string name="b">B</string>
+    <string name="cc">=0</string>
     <string name="rozwiazania">ROZWIĄZANIE:</string>
+    <string name="rx1">X1:</string>
+    <string name="rx2">X2:</string>
+
 </resources>
